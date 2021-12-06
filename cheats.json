@@ -113,6 +113,8 @@
     "desc": "List running containers",
     "cat": "Container",
     "keywords": [
+      "list containers",
+      "show containers"
     ],
     "shell": [
       "docker ps",
@@ -136,6 +138,8 @@
     "desc": "List network",
     "cat": "Network",
     "keywords": [
+      "list network",
+      "show network"
     ],
     "shell": [
       "docker network ls #version >= 1.21"
@@ -188,7 +192,8 @@
       "clean containers",
       "remove containers",
       "storage spaces",
-      "cleanup"
+      "cleanup",
+      "delete"
     ],
     "shell": [
       "docker system prune # version >= 1.25"
@@ -201,7 +206,8 @@
       "clean containers",
       "remove containers",
       "storage spaces",
-      "cleanup"
+      "cleanup",
+      "delete"
     ],
     "shell": [
       "docker system prune --volumes # version >= 1.25"
@@ -214,7 +220,8 @@
       "clean containers",
       "remove containers",
       "storage spaces",
-      "cleanup"
+      "cleanup",
+      "delete"
     ],
     "shell": [
       "docker system prune --all --volumes # version >= 1.25"
