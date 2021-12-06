@@ -1,0 +1,184 @@
+[
+  {
+    "desc": "Build a image with the name <i>my-image</i> and tag <i>1.0</i>",
+    "cat": "Image",
+    "keywords": [
+      "create image"
+    ],
+    "shell": [
+      "docker build -t my-image:1.0 ."
+    ]
+  },
+  {
+    "desc": "List local images",
+    "cat": "Image",
+    "keywords": [
+      "list images",
+      "show images"
+    ],
+    "shell": [
+      "docker image ls"
+    ]
+  },
+  {
+    "desc": "Delete local image by the name:tag <i>my-image:1.0</i>",
+    "cat": "Image",
+    "keywords": [
+      "delete image",
+      "remove image"
+    ],
+    "shell": [
+      "docker image rm my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Build an image in the current directory with the name <i>my-image</i>",
+    "cat": "Image",
+    "keywords": [
+      "create image"
+    ],
+    "shell": [
+      "docker build -t my-image ."
+    ]
+  },
+  {
+    "desc": "Run a container from <i>my-image:1.0</i>",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker run my-image:1.0",
+      "docker container run my-image:1.0 #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Run a container from <i>my-image:1.0</i> with the name <i>www</i>",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker run --name www my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Run a container from <i>my-image:1.0</i> exposing internal port <i>3000</i> to external port <i>80</i>",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker run --name www -p 80:3000 my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Stop a container by the name <i>www</i>",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker stop www",
+      "docker container stop www #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Stop containers by the name <i>www1</i> <i>www2</i> ...",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker stop www1 www2",
+      "docker container stop www1 www2 #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Kill a container by the name <i>www</i>",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker kill www",
+      "docker container kill www #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Kill containers by the name <i>www1</i> <i>www2</i> ...",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker kill www1 www2",
+      "docker container kill www1 www2 #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "List running containers",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker ps",
+      "docker container list #version >= 1.13",
+      "docker container ls #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "List all containers",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker ps --all",
+      "docker ps -a",
+      "docker container list --all #version >= 1.13",
+      "docker container ls -all #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "List network",
+    "cat": "Network",
+    "keywords": [
+    ],
+    "shell": [
+      "docker network ls #version >= 1.21"
+    ]
+  },
+  {
+    "desc": "Pull image <i>nginx</i> from a registry",
+    "cat": "Image",
+    "keywords": [
+    ],
+    "shell": [
+      "docker pull nginx",
+      "docker image pull nginx #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Push image <i>my-image</i> to repository <i>myrepo</i> under a registry",
+    "cat": "Image",
+    "keywords": [
+    ],
+    "shell": [
+      "docker push myrepo/my-image:2.0",
+      "docker image push myrepo/my-image:2.0 #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Runs <i>id</i> in <i>www</i> container",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker exec www id",
+      "docker container exec www id #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "Run an interactive bash shell on the container",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker exec -it ubuntu bash",
+      "docker container exec -it ubuntu bash #version >= 1.13"
+    ]
+  }
+]
