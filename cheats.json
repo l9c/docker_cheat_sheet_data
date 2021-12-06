@@ -180,5 +180,44 @@
       "docker exec -it ubuntu bash",
       "docker container exec -it ubuntu bash #version >= 1.13"
     ]
+  },
+  {
+    "desc": "Remove all unused containers, networks, images (both dangling and unreferenced)",
+    "cat": "System",
+    "keywords": [
+      "clean containers",
+      "remove containers",
+      "storage spaces",
+      "cleanup"
+    ],
+    "shell": [
+      "docker system prune # version >= 1.25"
+    ]
+  },
+  {
+    "desc": "Remove all unused containers, networks, images (both dangling and unreferenced), and volumes.",
+    "cat": "System",
+    "keywords": [
+      "clean containers",
+      "remove containers",
+      "storage spaces",
+      "cleanup"
+    ],
+    "shell": [
+      "docker system prune --volumes # version >= 1.25"
+    ]
+  },
+  {
+    "desc": "Remove all unused containers, networks, all unused images, and volumes.",
+    "cat": "System",
+    "keywords": [
+      "clean containers",
+      "remove containers",
+      "storage spaces",
+      "cleanup"
+    ],
+    "shell": [
+      "docker system prune --all --volumes # version >= 1.25"
+    ]
   }
 ]
