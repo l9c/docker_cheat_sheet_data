@@ -226,5 +226,81 @@
     "shell": [
       "docker system prune --all --volumes # version >= 1.25"
     ]
+  },
+  {
+    "desc": "Create and run containers in the foreground",
+    "cat": "Compose",
+    "keywords": [
+      "start containers",
+      "run containers"
+    ],
+    "shell": [
+      "docker-compose up"
+    ]
+  },
+  {
+    "desc": "Create and run containers in the background",
+    "cat": "Compose",
+    "keywords": [
+      "start containers",
+      "run containers"
+    ],
+    "shell": [
+      "docker-compose up -d"
+    ]
+  },
+  {
+    "desc": "List running containers",
+    "cat": "Compose",
+    "keywords": [
+      "list containers",
+      "show containers"
+    ],
+    "shell": [
+      "docker-compose ps"
+    ]
+  },
+  {
+    "desc": "List all containers",
+    "cat": "Compose",
+    "keywords": [
+      "list containers",
+      "show containers"
+    ],
+    "shell": [
+      "docker-compose ps --all",
+      "docker-compose ps -a"
+    ]
+  },
+  {
+    "desc": "Stop containers",
+    "cat": "Compose",
+    "keywords": [
+      "stop containers"
+    ],
+    "shell": [
+      "docker-compose stop"
+    ]
+  },
+  {
+    "desc": "Stop and remove containers, networks created by up",
+    "cat": "Compose",
+    "keywords": [
+      "stop containers",
+      "remove containers",
+      "delete containers"
+    ],
+    "shell": [
+      "docker-compose down"
+    ]
+  },
+  {
+    "desc": "Pull images defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [
+    ],
+    "shell": [
+      "docker-compose pull"
+    ]
   }
 ]
