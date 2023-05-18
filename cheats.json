@@ -42,6 +42,31 @@
     ]
   },
   {
+    "desc": "List running containers",
+    "cat": "Container",
+    "keywords": [
+      "list containers",
+      "show containers"
+    ],
+    "shell": [
+      "docker ps",
+      "docker container list #version >= 1.13",
+      "docker container ls #version >= 1.13"
+    ]
+  },
+  {
+    "desc": "List all containers",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker ps --all",
+      "docker ps -a",
+      "docker container list --all #version >= 1.13",
+      "docker container ls -all #version >= 1.13"
+    ]
+  },
+  {
     "desc": "Run a container from <i>my-image:1.0</i>",
     "cat": "Container",
     "keywords": [
@@ -90,6 +115,15 @@
     ]
   },
   {
+    "desc": "Stop all the containers that match a keyword <i>example</i>",
+    "cat": "Container",
+    "keywords": [
+    ],
+    "shell": [
+      "docker stop $(docker ps -a | grep \"example\" | awk '{print $1}')"
+    ]
+  },
+  {
     "desc": "Kill a container by the name <i>www</i>",
     "cat": "Container",
     "keywords": [
@@ -110,28 +144,22 @@
     ]
   },
   {
-    "desc": "List running containers",
+    "desc": "Remove containers by the name <i>www1</i> <i>www2</i> ...",
     "cat": "Container",
     "keywords": [
-      "list containers",
-      "show containers"
     ],
     "shell": [
-      "docker ps",
-      "docker container list #version >= 1.13",
-      "docker container ls #version >= 1.13"
+      "docker rm www1 www2",
+      "docker container rm www1 www2 #version >= 1.13"
     ]
   },
   {
-    "desc": "List all containers",
+    "desc": "Remove all the containers that match a keyword <i>example</i>",
     "cat": "Container",
     "keywords": [
     ],
     "shell": [
-      "docker ps --all",
-      "docker ps -a",
-      "docker container list --all #version >= 1.13",
-      "docker container ls -all #version >= 1.13"
+      "docker rm $(docker ps -a | grep \"example\" | awk '{print $1}')"
     ]
   },
   {
@@ -146,13 +174,13 @@
     ]
   },
   {
-    "desc": "Pull image <i>nginx</i> from a registry",
+    "desc": "Pull image <i>example</i> from a registry",
     "cat": "Image",
     "keywords": [
     ],
     "shell": [
-      "docker pull nginx",
-      "docker image pull nginx #version >= 1.13"
+      "docker pull example",
+      "docker image pull example #version >= 1.13"
     ]
   },
   {
