@@ -63,7 +63,7 @@
       "docker ps --all",
       "docker ps -a",
       "docker container list --all",
-      "docker container ls -all"
+      "docker container ls --all"
     ]
   },
   {
@@ -205,7 +205,7 @@
     ]
   },
   {
-    "desc": "Backup my_volume to my_backup.tar",
+    "desc": "Backup <i>my_volume</i> to <i>my_backup.tar</i>",
     "cat": "Volume",
     "keywords": [
       "volume backup",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "desc": "Restore my_backup.tar to my_volume",
+    "desc": "Restore <i>my_backup.tar</i> to <i>my_volume</i>",
     "cat": "Volume",
     "keywords": [
       "volume restore",
@@ -383,5 +383,171 @@
     "shell": [
       "docker-compose pull"
     ]
+  },
+
+  {
+    "desc": "Run a container in the background from <i>my-image:1.0</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker run -d my-image:1.0",
+      "docker container run -d my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Attach to a running container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker attach www",
+      "docker container attach www"
+    ]
+  },
+  {
+    "desc": "Inspect a container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker inspect www",
+      "docker container inspect www"
+    ]
+  },
+  {
+    "desc": "List logs of a container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker logs www",
+      "docker container logs www"
+    ]
+  },
+  {
+    "desc": "Start a stopped container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker start www",
+      "docker container start www"
+    ]
+  },
+  {
+    "desc": "Restart a running container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker restart www",
+      "docker container restart www"
+    ]
+  },
+  {
+    "desc": "Pause a running container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker pause www",
+      "docker container pause www"
+    ]
+  },
+  {
+    "desc": "Unpause a paused container named <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker unpause www",
+      "docker container unpause www"
+    ]
+  },
+  {
+    "desc": "Rename a container named <i>www</i> to <i>web</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker rename www web",
+      "docker container rename www web"
+    ]
+  },
+  {
+    "desc": "Create a network with the name <i>my-network</i>",
+    "cat": "Network",
+    "keywords": [],
+    "shell": [
+      "docker network create my-network"
+    ]
+  },
+  {
+    "desc": "Remove a network with the name <i>my-network</i>",
+    "cat": "Network",
+    "keywords": [],
+    "shell": [
+      "docker network rm my-network"
+    ]
+  },
+  {
+    "desc": "Inspect a network with the name <i>my-network</i>",
+    "cat": "Network",
+    "keywords": [],
+    "shell": [
+      "docker network inspect my-network"
+    ]
+  },
+  {
+    "desc": "Create a container using Docker Compose",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose create"
+    ]
+  },
+  {
+    "desc": "Build and start containers using Docker Compose",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose up --build",
+      "docker-compose up -d --build"
+    ]
+  },
+  {
+    "desc": "Scale services defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose up -d --scale service_name=num"
+    ]
+  },
+  {
+    "desc": "View the logs of services defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose logs",
+      "docker-compose logs service_name"
+    ]
+  },
+  {
+    "desc": "Execute a command in a running container defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose exec service_name command"
+    ]
+  },
+  {
+    "desc": "Run a one-off command in a service container defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose run service_name command"
+    ]
+  },
+  {
+    "desc": "Remove stopped containers created by up",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose rm"
+    ]
   }
+
+
 ]
