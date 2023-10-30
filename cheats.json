@@ -7,7 +7,7 @@
       "run containers"
     ],
     "shell": [
-      "docker-compose up"
+      "docker compose up"
     ]
   },
   {
@@ -18,7 +18,7 @@
       "run containers"
     ],
     "shell": [
-      "docker-compose up -d"
+      "docker compose up -d"
     ]
   },
   {
@@ -29,7 +29,7 @@
       "show containers"
     ],
     "shell": [
-      "docker-compose ps"
+      "docker compose ps"
     ]
   },
   {
@@ -40,8 +40,8 @@
       "show containers"
     ],
     "shell": [
-      "docker-compose ps --all",
-      "docker-compose ps -a"
+      "docker compose ps --all",
+      "docker compose ps -a"
     ]
   },
   {
@@ -51,7 +51,7 @@
       "stop containers"
     ],
     "shell": [
-      "docker-compose stop"
+      "docker compose stop"
     ]
   },
   {
@@ -63,7 +63,7 @@
       "delete containers"
     ],
     "shell": [
-      "docker-compose down"
+      "docker compose down"
     ]
   },
   {
@@ -71,7 +71,7 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose pull"
+      "docker compose pull"
     ]
   },
   {
@@ -79,7 +79,7 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose create"
+      "docker compose create"
     ]
   },
   {
@@ -87,8 +87,8 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose up --build",
-      "docker-compose up -d --build"
+      "docker compose up --build",
+      "docker compose up -d --build"
     ]
   },
   {
@@ -96,7 +96,7 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose up -d --scale service_name=num"
+      "docker compose up -d --scale service_name=num"
     ]
   },
   {
@@ -104,8 +104,8 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose logs",
-      "docker-compose logs service_name"
+      "docker compose logs",
+      "docker compose logs service_name"
     ]
   },
   {
@@ -113,7 +113,7 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose exec service_name command"
+      "docker compose exec service_name command"
     ]
   },
   {
@@ -121,7 +121,7 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose run service_name command"
+      "docker compose run service_name command"
     ]
   },
   {
@@ -129,7 +129,7 @@
     "cat": "Compose",
     "keywords": [],
     "shell": [
-      "docker-compose rm"
+      "docker compose rm"
     ]
   },
   {
