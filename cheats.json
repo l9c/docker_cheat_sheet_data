@@ -1,314 +1,5 @@
 [
   {
-    "desc": "Build a image with the name <i>my-image</i> and tag <i>1.0</i>",
-    "cat": "Image",
-    "keywords": [
-      "create image"
-    ],
-    "shell": [
-      "docker build -t my-image:1.0 ."
-    ]
-  },
-  {
-    "desc": "List local images",
-    "cat": "Image",
-    "keywords": [
-      "list images",
-      "show images"
-    ],
-    "shell": [
-      "docker image ls"
-    ]
-  },
-  {
-    "desc": "Delete local image by the name:tag <i>my-image:1.0</i>",
-    "cat": "Image",
-    "keywords": [
-      "delete image",
-      "remove image"
-    ],
-    "shell": [
-      "docker image rm my-image:1.0"
-    ]
-  },
-  {
-    "desc": "Build an image in the current directory with the name <i>my-image</i>",
-    "cat": "Image",
-    "keywords": [
-      "create image"
-    ],
-    "shell": [
-      "docker build -t my-image ."
-    ]
-  },
-  {
-    "desc": "List running containers",
-    "cat": "Container",
-    "keywords": [
-      "list containers",
-      "show containers"
-    ],
-    "shell": [
-      "docker ps",
-      "docker container list",
-      "docker container ls"
-    ]
-  },
-  {
-    "desc": "List all containers",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker ps --all",
-      "docker ps -a",
-      "docker container list --all",
-      "docker container ls --all"
-    ]
-  },
-  {
-    "desc": "Run a container from <i>my-image:1.0</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker run my-image:1.0",
-      "docker container run my-image:1.0"
-    ]
-  },
-  {
-    "desc": "Run a container from <i>my-image:1.0</i> with the name <i>www</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker run --name www my-image:1.0"
-    ]
-  },
-  {
-    "desc": "Run a container from <i>my-image:1.0</i> exposing internal port <i>3000</i> to external port <i>80</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker run --name www -p 80:3000 my-image:1.0"
-    ]
-  },
-  {
-    "desc": "Stop a container by the name <i>www</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker stop www",
-      "docker container stop www"
-    ]
-  },
-  {
-    "desc": "Stop containers by the name <i>www1</i> <i>www2</i> ...",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker stop www1 www2",
-      "docker container stop www1 www2"
-    ]
-  },
-  {
-    "desc": "Stop all the containers that match a keyword <i>example</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker stop $(docker ps -a | grep \"example\" | awk '{print $1}')"
-    ]
-  },
-  {
-    "desc": "Kill a container by the name <i>www</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker kill www",
-      "docker container kill www"
-    ]
-  },
-  {
-    "desc": "Kill containers by the name <i>www1</i> <i>www2</i> ...",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker kill www1 www2",
-      "docker container kill www1 www2"
-    ]
-  },
-  {
-    "desc": "Remove containers by the name <i>www1</i> <i>www2</i> ...",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker rm www1 www2",
-      "docker container rm www1 www2"
-    ]
-  },
-  {
-    "desc": "Remove all the containers that match a keyword <i>example</i>",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker rm $(docker ps -a | grep \"example\" | awk '{print $1}')"
-    ]
-  },
-  {
-    "desc": "List networks",
-    "cat": "Network",
-    "keywords": [
-      "list networks",
-      "show networks"
-    ],
-    "shell": [
-      "docker network ls"
-    ]
-  },
-  {
-    "desc": "List volumes",
-    "cat": "Volume",
-    "keywords": [
-      "list volumes",
-      "show volumes"
-    ],
-    "shell": [
-      "docker volume ls"
-    ]
-  },
-  {
-    "desc": "Create a volume",
-    "cat": "Volume",
-    "keywords": [
-      "volume creation"
-    ],
-    "shell": [
-      "docker volume create hello"
-    ]
-  },
-  {
-    "desc": "Remove all unused local volumes",
-    "cat": "Volume",
-    "keywords": [
-      "Remove volumes"
-    ],
-    "shell": [
-      "docker volume prune"
-    ]
-  },
-  {
-    "desc": "Backup <i>my_volume</i> to <i>my_backup.tar</i>",
-    "cat": "Volume",
-    "keywords": [
-      "volume backup",
-      "data backup"
-    ],
-    "shell": [
-      "docker run --rm  --volume my_volume:/mount_bkp   --volume $(pwd):/backup   ubuntu   tar cvf /backup/my_backup.tar /mount_bkp"
-    ]
-  },
-  {
-    "desc": "Restore <i>my_backup.tar</i> to <i>my_volume</i>",
-    "cat": "Volume",
-    "keywords": [
-      "volume restore",
-      "data restore"
-    ],
-    "shell": [
-      "docker run --rm  --volume my_volume:/mount_bkp --volume $(pwd):/backup ubuntu  tar xvf /backup/my_backup.tar -C /mount_bkp --strip 1"
-    ]
-  },
-  {
-    "desc": "Pull image <i>example</i> from a registry",
-    "cat": "Image",
-    "keywords": [
-    ],
-    "shell": [
-      "docker pull example",
-      "docker image pull example"
-    ]
-  },
-  {
-    "desc": "Push image <i>my-image</i> to repository <i>myrepo</i> under a registry",
-    "cat": "Image",
-    "keywords": [
-    ],
-    "shell": [
-      "docker push myrepo/my-image:2.0",
-      "docker image push myrepo/my-image:2.0"
-    ]
-  },
-  {
-    "desc": "Runs <i>id</i> in <i>www</i> container",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker exec www id",
-      "docker container exec www id"
-    ]
-  },
-  {
-    "desc": "Run an interactive bash shell on the container",
-    "cat": "Container",
-    "keywords": [
-    ],
-    "shell": [
-      "docker exec -it ubuntu bash",
-      "docker container exec -it ubuntu bash"
-    ]
-  },
-  {
-    "desc": "Remove all unused containers, networks, images (both dangling and unreferenced)",
-    "cat": "System",
-    "keywords": [
-      "clean containers",
-      "remove containers",
-      "storage spaces",
-      "cleanup",
-      "delete"
-    ],
-    "shell": [
-      "docker system prune"
-    ]
-  },
-  {
-    "desc": "Remove all unused containers, networks, images (both dangling and unreferenced), and volumes.",
-    "cat": "System",
-    "keywords": [
-      "clean containers",
-      "remove containers",
-      "storage spaces",
-      "cleanup",
-      "delete"
-    ],
-    "shell": [
-      "docker system prune --volumes"
-    ]
-  },
-  {
-    "desc": "Remove all unused containers, networks, all unused images, and volumes.",
-    "cat": "System",
-    "keywords": [
-      "clean containers",
-      "remove containers",
-      "storage spaces",
-      "cleanup",
-      "delete"
-    ],
-    "shell": [
-      "docker system prune --all --volumes"
-    ]
-  },
-  {
     "desc": "Create and run containers in the foreground",
     "cat": "Compose",
     "keywords": [
@@ -378,13 +69,197 @@
   {
     "desc": "Pull images defined in a Compose file",
     "cat": "Compose",
-    "keywords": [
-    ],
+    "keywords": [],
     "shell": [
       "docker-compose pull"
     ]
   },
-
+  {
+    "desc": "Create a container using Docker Compose",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose create"
+    ]
+  },
+  {
+    "desc": "Build and start containers using Docker Compose",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose up --build",
+      "docker-compose up -d --build"
+    ]
+  },
+  {
+    "desc": "Scale services defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose up -d --scale service_name=num"
+    ]
+  },
+  {
+    "desc": "View the logs of services defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose logs",
+      "docker-compose logs service_name"
+    ]
+  },
+  {
+    "desc": "Execute a command in a running container defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose exec service_name command"
+    ]
+  },
+  {
+    "desc": "Run a one-off command in a service container defined in a Compose file",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose run service_name command"
+    ]
+  },
+  {
+    "desc": "Remove stopped containers created by up",
+    "cat": "Compose",
+    "keywords": [],
+    "shell": [
+      "docker-compose rm"
+    ]
+  },
+  {
+    "desc": "List running containers",
+    "cat": "Container",
+    "keywords": [
+      "list containers",
+      "show containers"
+    ],
+    "shell": [
+      "docker ps",
+      "docker container list",
+      "docker container ls"
+    ]
+  },
+  {
+    "desc": "List all containers",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker ps --all",
+      "docker ps -a",
+      "docker container list --all",
+      "docker container ls --all"
+    ]
+  },
+  {
+    "desc": "Run a container from <i>my-image:1.0</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker run my-image:1.0",
+      "docker container run my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Run a container from <i>my-image:1.0</i> with the name <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker run --name www my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Run a container from <i>my-image:1.0</i> exposing internal port <i>3000</i> to external port <i>80</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker run --name www -p 80:3000 my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Stop a container by the name <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker stop www",
+      "docker container stop www"
+    ]
+  },
+  {
+    "desc": "Stop containers by the name <i>www1</i> <i>www2</i> ...",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker stop www1 www2",
+      "docker container stop www1 www2"
+    ]
+  },
+  {
+    "desc": "Stop all the containers that match a keyword <i>example</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker stop $(docker ps -a | grep \"example\" | awk '{print $1}')"
+    ]
+  },
+  {
+    "desc": "Kill a container by the name <i>www</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker kill www",
+      "docker container kill www"
+    ]
+  },
+  {
+    "desc": "Kill containers by the name <i>www1</i> <i>www2</i> ...",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker kill www1 www2",
+      "docker container kill www1 www2"
+    ]
+  },
+  {
+    "desc": "Remove containers by the name <i>www1</i> <i>www2</i> ...",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker rm www1 www2",
+      "docker container rm www1 www2"
+    ]
+  },
+  {
+    "desc": "Remove all the containers that match a keyword <i>example</i>",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker rm $(docker ps -a | grep \"example\" | awk '{print $1}')"
+    ]
+  },
+  {
+    "desc": "Runs <i>id</i> in <i>www</i> container",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker exec www id",
+      "docker container exec www id"
+    ]
+  },
+  {
+    "desc": "Run an interactive bash shell on the container",
+    "cat": "Container",
+    "keywords": [],
+    "shell": [
+      "docker exec -it ubuntu bash",
+      "docker container exec -it ubuntu bash"
+    ]
+  },
   {
     "desc": "Run a container in the background from <i>my-image:1.0</i>",
     "cat": "Container",
@@ -467,6 +342,77 @@
     ]
   },
   {
+    "desc": "Build a image with the name <i>my-image</i> and tag <i>1.0</i>",
+    "cat": "Image",
+    "keywords": [
+      "create image"
+    ],
+    "shell": [
+      "docker build -t my-image:1.0 ."
+    ]
+  },
+  {
+    "desc": "List local images",
+    "cat": "Image",
+    "keywords": [
+      "list images",
+      "show images"
+    ],
+    "shell": [
+      "docker image ls"
+    ]
+  },
+  {
+    "desc": "Delete local image by the name:tag <i>my-image:1.0</i>",
+    "cat": "Image",
+    "keywords": [
+      "delete image",
+      "remove image"
+    ],
+    "shell": [
+      "docker image rm my-image:1.0"
+    ]
+  },
+  {
+    "desc": "Build an image in the current directory with the name <i>my-image</i>",
+    "cat": "Image",
+    "keywords": [
+      "create image"
+    ],
+    "shell": [
+      "docker build -t my-image ."
+    ]
+  },
+  {
+    "desc": "Pull image <i>example</i> from a registry",
+    "cat": "Image",
+    "keywords": [],
+    "shell": [
+      "docker pull example",
+      "docker image pull example"
+    ]
+  },
+  {
+    "desc": "Push image <i>my-image</i> to repository <i>myrepo</i> under a registry",
+    "cat": "Image",
+    "keywords": [],
+    "shell": [
+      "docker push myrepo/my-image:2.0",
+      "docker image push myrepo/my-image:2.0"
+    ]
+  },
+  {
+    "desc": "List networks",
+    "cat": "Network",
+    "keywords": [
+      "list networks",
+      "show networks"
+    ],
+    "shell": [
+      "docker network ls"
+    ]
+  },
+  {
     "desc": "Create a network with the name <i>my-network</i>",
     "cat": "Network",
     "keywords": [],
@@ -491,63 +437,98 @@
     ]
   },
   {
-    "desc": "Create a container using Docker Compose",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "Remove all unused containers, networks, images (both dangling and unreferenced)",
+    "cat": "System",
+    "keywords": [
+      "clean containers",
+      "remove containers",
+      "storage spaces",
+      "cleanup",
+      "delete"
+    ],
     "shell": [
-      "docker-compose create"
+      "docker system prune"
     ]
   },
   {
-    "desc": "Build and start containers using Docker Compose",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "Remove all unused containers, networks, images (both dangling and unreferenced), and volumes.",
+    "cat": "System",
+    "keywords": [
+      "clean containers",
+      "remove containers",
+      "storage spaces",
+      "cleanup",
+      "delete"
+    ],
     "shell": [
-      "docker-compose up --build",
-      "docker-compose up -d --build"
+      "docker system prune --volumes"
     ]
   },
   {
-    "desc": "Scale services defined in a Compose file",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "Remove all unused containers, networks, all unused images, and volumes.",
+    "cat": "System",
+    "keywords": [
+      "clean containers",
+      "remove containers",
+      "storage spaces",
+      "cleanup",
+      "delete"
+    ],
     "shell": [
-      "docker-compose up -d --scale service_name=num"
+      "docker system prune --all --volumes"
     ]
   },
   {
-    "desc": "View the logs of services defined in a Compose file",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "List volumes",
+    "cat": "Volume",
+    "keywords": [
+      "list volumes",
+      "show volumes"
+    ],
     "shell": [
-      "docker-compose logs",
-      "docker-compose logs service_name"
+      "docker volume ls"
     ]
   },
   {
-    "desc": "Execute a command in a running container defined in a Compose file",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "Create a volume",
+    "cat": "Volume",
+    "keywords": [
+      "volume creation"
+    ],
     "shell": [
-      "docker-compose exec service_name command"
+      "docker volume create hello"
     ]
   },
   {
-    "desc": "Run a one-off command in a service container defined in a Compose file",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "Remove all unused local volumes",
+    "cat": "Volume",
+    "keywords": [
+      "Remove volumes"
+    ],
     "shell": [
-      "docker-compose run service_name command"
+      "docker volume prune"
     ]
   },
   {
-    "desc": "Remove stopped containers created by up",
-    "cat": "Compose",
-    "keywords": [],
+    "desc": "Backup <i>my_volume</i> to <i>my_backup.tar</i>",
+    "cat": "Volume",
+    "keywords": [
+      "volume backup",
+      "data backup"
+    ],
     "shell": [
-      "docker-compose rm"
+      "docker run --rm  --volume my_volume:/mount_bkp   --volume $(pwd):/backup   ubuntu   tar cvf /backup/my_backup.tar /mount_bkp"
+    ]
+  },
+  {
+    "desc": "Restore <i>my_backup.tar</i> to <i>my_volume</i>",
+    "cat": "Volume",
+    "keywords": [
+      "volume restore",
+      "data restore"
+    ],
+    "shell": [
+      "docker run --rm  --volume my_volume:/mount_bkp --volume $(pwd):/backup ubuntu  tar xvf /backup/my_backup.tar -C /mount_bkp --strip 1"
     ]
   }
-
-
 ]
