@@ -163,14 +163,45 @@
     ]
   },
   {
-    "desc": "List network",
+    "desc": "List networks",
     "cat": "Network",
     "keywords": [
-      "list network",
-      "show network"
+      "list networks",
+      "show networks"
     ],
     "shell": [
-      "docker network ls #version >= 1.21"
+      "docker network ls"
+    ]
+  },
+  {
+    "desc": "List volumes",
+    "cat": "Volume",
+    "keywords": [
+      "list volumes",
+      "show volumes"
+    ],
+    "shell": [
+      "docker volume ls"
+    ]
+  },
+  {
+    "desc": "Create a volume",
+    "cat": "Volume",
+    "keywords": [
+      "volume creation"
+    ],
+    "shell": [
+      "docker volume create hello"
+    ]
+  },
+  {
+    "desc": "Remove all unused local volumes",
+    "cat": "Volume",
+    "keywords": [
+      "Remove volumes"
+    ],
+    "shell": [
+      "docker volume prune"
     ]
   },
   {
