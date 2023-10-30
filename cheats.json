@@ -50,8 +50,8 @@
     ],
     "shell": [
       "docker ps",
-      "docker container list #version >= 1.13",
-      "docker container ls #version >= 1.13"
+      "docker container list",
+      "docker container ls"
     ]
   },
   {
@@ -62,8 +62,8 @@
     "shell": [
       "docker ps --all",
       "docker ps -a",
-      "docker container list --all #version >= 1.13",
-      "docker container ls -all #version >= 1.13"
+      "docker container list --all",
+      "docker container ls -all"
     ]
   },
   {
@@ -73,7 +73,7 @@
     ],
     "shell": [
       "docker run my-image:1.0",
-      "docker container run my-image:1.0 #version >= 1.13"
+      "docker container run my-image:1.0"
     ]
   },
   {
@@ -101,7 +101,7 @@
     ],
     "shell": [
       "docker stop www",
-      "docker container stop www #version >= 1.13"
+      "docker container stop www"
     ]
   },
   {
@@ -111,7 +111,7 @@
     ],
     "shell": [
       "docker stop www1 www2",
-      "docker container stop www1 www2 #version >= 1.13"
+      "docker container stop www1 www2"
     ]
   },
   {
@@ -130,7 +130,7 @@
     ],
     "shell": [
       "docker kill www",
-      "docker container kill www #version >= 1.13"
+      "docker container kill www"
     ]
   },
   {
@@ -140,7 +140,7 @@
     ],
     "shell": [
       "docker kill www1 www2",
-      "docker container kill www1 www2 #version >= 1.13"
+      "docker container kill www1 www2"
     ]
   },
   {
@@ -150,7 +150,7 @@
     ],
     "shell": [
       "docker rm www1 www2",
-      "docker container rm www1 www2 #version >= 1.13"
+      "docker container rm www1 www2"
     ]
   },
   {
@@ -180,7 +180,7 @@
     ],
     "shell": [
       "docker pull example",
-      "docker image pull example #version >= 1.13"
+      "docker image pull example"
     ]
   },
   {
@@ -190,7 +190,7 @@
     ],
     "shell": [
       "docker push myrepo/my-image:2.0",
-      "docker image push myrepo/my-image:2.0 #version >= 1.13"
+      "docker image push myrepo/my-image:2.0"
     ]
   },
   {
@@ -200,7 +200,7 @@
     ],
     "shell": [
       "docker exec www id",
-      "docker container exec www id #version >= 1.13"
+      "docker container exec www id"
     ]
   },
   {
@@ -210,7 +210,7 @@
     ],
     "shell": [
       "docker exec -it ubuntu bash",
-      "docker container exec -it ubuntu bash #version >= 1.13"
+      "docker container exec -it ubuntu bash"
     ]
   },
   {
@@ -224,7 +224,7 @@
       "delete"
     ],
     "shell": [
-      "docker system prune # version >= 1.25"
+      "docker system prune"
     ]
   },
   {
@@ -238,7 +238,7 @@
       "delete"
     ],
     "shell": [
-      "docker system prune --volumes # version >= 1.25"
+      "docker system prune --volumes"
     ]
   },
   {
@@ -252,7 +252,7 @@
       "delete"
     ],
     "shell": [
-      "docker system prune --all --volumes # version >= 1.25"
+      "docker system prune --all --volumes"
     ]
   },
   {
