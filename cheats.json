@@ -205,6 +205,28 @@
     ]
   },
   {
+    "desc": "Backup my_volume to my_backup.tar",
+    "cat": "Volume",
+    "keywords": [
+      "volume backup",
+      "data backup"
+    ],
+    "shell": [
+      "docker run --rm  --volume my_volume:/mount_bkp   --volume $(pwd):/backup   ubuntu   tar cvf /backup/my_backup.tar /mount_bkp"
+    ]
+  },
+  {
+    "desc": "Restore my_backup.tar to my_volume",
+    "cat": "Volume",
+    "keywords": [
+      "volume restore",
+      "data restore"
+    ],
+    "shell": [
+      "docker run --rm  --volume my_volume:/mount_bkp --volume $(pwd):/backup ubuntu  tar xvf /backup/my_backup.tar -C /mount_bkp --strip 1"
+    ]
+  },
+  {
     "desc": "Pull image <i>example</i> from a registry",
     "cat": "Image",
     "keywords": [
